@@ -49,8 +49,4 @@ df1.loc[df1['0'] == 0, 'Chances of T2D'] = 'No'
 df1.loc[df1['0'] == 1, 'Chances of T2D'] = 'Yes'
 st.write(df1)
 
-prediction_proba = load_clf.predict_proba(df)
-st.subheader('Prediction Probability in % :')
-st.write(prediction_proba * 100)
-
 streamlit_analytics.stop_tracking()
