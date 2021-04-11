@@ -1,4 +1,4 @@
 streamlit==0.80.0
 pandas==0.25.3
 numpy==1.19.2
-catboost==0.16.2
+catboost==0.25.1
