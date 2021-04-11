@@ -1,8 +1,11 @@
 import streamlit as st
+import streamlit_analytics
 import pandas as pd
 import numpy as np
 import pickle
 from catboost import CatBoostClassifier
+
+streamlit_analytics.start_tracking()
 
 from PIL import Image
 image = Image.open('gusto.jpg')
@@ -49,3 +52,5 @@ st.write(df1)
 prediction_proba = load_clf.predict_proba(df)
 st.subheader('Prediction Probability in % :')
 st.write(prediction_proba * 100)
+
+streamlit_analytics.stop_tracking()
